@@ -9,8 +9,12 @@ contract SimpleCoin is Ownable {
         mint(owner, initialSupply);
     }
 
-    mapping(address => uint256) public coinBalance;
-    mapping(address => mapping(address => uint256)) public allowance;
+    string public constant tokenName = "pearl";
+    string public constant tokenSymbol = "SCT";
+    uint8 public constant decimals = 18;
+
+    mapping(address => uint256) internal coinBalance;
+    mapping(address => mapping(address => uint256)) internal allowances;
 
     event Transfer(address indexed from, address indexed to, uint256 value);
 
@@ -30,22 +34,22 @@ contract SimpleCoin is Ownable {
         require(int256(to) != 0x0);
         require(coinBalance[from] > amount);
         require(coinBalance[to] + amount >= coinBalance[to]);
-        require(amount <= allowance[from][msg.sender]);
+        require(amount <= allowances[from][msg.sender]);
 
         coinBalance[from] -= amount;
         coinBalance[to] += amount;
-        allowance[from][msg.sender] -= amount;
+        allowances[from][msg.sender] -= amount;
 
         emit Transfer(from, to, amount);
 
         return true;
     }
 
-    function authorize(address authorizedAccount, uint256 _allowance)
+    function authorize(address authorizedAccount, uint256 allowance)
         public
         returns (bool success)
     {
-        allowance[msg.sender][authorizedAccount] = _allowance;
+        allowances[msg.sender][authorizedAccount] = allowance;
         return true;
     }
 
@@ -61,4 +65,33 @@ contract SimpleCoin is Ownable {
         frozenAccount[target] = freeze;
         emit FrozenAccount(target, freeze);
     }
+
+    event Approval(
+        address indexed authorizer,
+        address indexed to,
+        uint256 value
+    );
+
+    function approve(address authorizedAcc, uint256 amt)
+        public
+        returns (bool success)
+    {
+        allowances[msg.sender][authorizedAcc] = amt;
+        emit Approval(msg.sender, authorizedAcc, amt);
+        return true;
+    }
+
+    function allowance(address authorizer, address authorizedAccount)
+        public
+        view
+        returns (uint256)
+    {
+        return allowances[authorizer][authorizedAccount];
+    }
+
+    function balanceOf(address owner) public view returns (uint256 balance) {
+        return coinBalance[owner];
+    }
+
+    // totalSupply returns uint256
 }
