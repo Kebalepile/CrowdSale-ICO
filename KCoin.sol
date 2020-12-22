@@ -4,8 +4,14 @@ pragma solidity >=0.4.22 <0.9.0;
 import "./SimpleCoin.sol";
 
 contract KCoin is SimpleCoin {
+    
+    constructor(uint256 initialSupply) public SimpleCoin(initialSupply) {}
+
+    function release() public onlyOwner {
+        released = true;
+    }
     bool public released;
-    // ...
+
 
     modifier isReleased {
         if (!released) {
@@ -14,11 +20,7 @@ contract KCoin is SimpleCoin {
         _;
     }
 
-    constructor(uint256 initialSupply) public SimpleCoin(initialSupply) {}
-
-    function release() public onlyOwner {
-        released = true;
-    }
+   
 
     function transfer(address to, uint256 amount) public isReleased()  {
         require(int(to) != 0x0);
