@@ -50,15 +50,15 @@ contract CrowdFund is Ownable {
     event LogTokenAsignment(address investor, uint256 numTokens);
 
     function adjustPriceLevel() external onlyOwner {
-        bool level1 = investmentReceived <= 3000000000000000000000 wei;
+        bool level1 = investmentReceived <=  300 ether;
 
-        bool level2 = investmentReceived > 3000000000000000000000 wei &&
-            investmentReceived <= 10000000000000000000000 wei;
+        bool level2 = investmentReceived > 300 ether &&
+            investmentReceived <= 400 ether;
 
-        bool level3 = investmentReceived > 10000000000000000000000 wei &&
-            investmentReceived <= 1000000000000000000 wei;
+        bool level3 = investmentReceived > 400 ether  &&
+            investmentReceived <=  600 ether;
 
-        bool level4 = investmentReceived > 15000000000000000000 wei;
+        bool level4 = investmentReceived > 600 ether;
 
         if (level1) {
             tokenPriceLevel = PriceLevel[0];
