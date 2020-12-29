@@ -1,0 +1,609 @@
+{
+  "contractName": "HelloWorld",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "str",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setMessage",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getMessage",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getMessage\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"str\",\"type\":\"bytes32\"}],\"name\":\"setMessage\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/user/Desktop/projects/crowdManager/src/contracts/HelloWorld.sol\":\"HelloWorld\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/user/Desktop/projects/crowdManager/src/contracts/HelloWorld.sol\":{\"keccak256\":\"0x110652e1e6f8771e82410b2853bdbf4ee0a4dcfa97c079fb524795b9b52bb78f\",\"urls\":[\"bzz-raw://8e2a7f7b500a8ae46e2426c7debf1e7d36c1162483b7ee9d9712f4e12644aac5\",\"dweb:/ipfs/QmTAjqYiC9P5B5N2sEYVQ5no8DBgeSkqJdm38h5SzUhSZm\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c68061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c8063b32fead5146037578063ce6d41de146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea265627a7a7231582056c6930a50631b2439f826fdfc6b21c3d31932bb725e4ce7c2501daa8119e50e64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c8063b32fead5146037578063ce6d41de146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea265627a7a7231582056c6930a50631b2439f826fdfc6b21c3d31932bb725e4ce7c2501daa8119e50e64736f6c63430005100032",
+  "sourceMap": "66:196:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:196:2;;;;;;;",
+  "deployedSourceMap": "66:196:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:196:2;;;;;;;;;;;;;;;;;;;;;;;;109:66;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;109:66:2;;;;;;;;;;;;;;;;;:::i;:::-;;178:82;;;:::i;:::-;;;;;;;;;;;;;;;;;;;109:66;167:3;157:7;:13;;;;109:66;:::o;178:82::-;222:7;248;;241:14;;178:82;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract HelloWorld {\n  bytes32 message;\n  function setMessage(bytes32 str) external {\n    message = str;\n  }\n  function getMessage() view external returns(bytes32) {\n        return message;\n  }\n}\n",
+  "sourcePath": "C:/Users/user/Desktop/projects/crowdManager/src/contracts/HelloWorld.sol",
+  "ast": {
+    "absolutePath": "/C/Users/user/Desktop/projects/crowdManager/src/contracts/HelloWorld.sol",
+    "exportedSymbols": {
+      "HelloWorld": [
+        471
+      ]
+    },
+    "id": 472,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 450,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 471,
+        "linearizedBaseContracts": [
+          471
+        ],
+        "name": "HelloWorld",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 452,
+            "name": "message",
+            "nodeType": "VariableDeclaration",
+            "scope": 471,
+            "src": "90:15:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 451,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "90:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 461,
+              "nodeType": "Block",
+              "src": "151:24:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 459,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 457,
+                      "name": "message",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 452,
+                      "src": "157:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 458,
+                      "name": "str",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 454,
+                      "src": "167:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "157:13:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 460,
+                  "nodeType": "ExpressionStatement",
+                  "src": "157:13:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 462,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMessage",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 455,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 454,
+                  "name": "str",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 462,
+                  "src": "129:11:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 453,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "128:13:2"
+            },
+            "returnParameters": {
+              "id": 456,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:2"
+            },
+            "scope": 471,
+            "src": "109:66:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 469,
+              "nodeType": "Block",
+              "src": "231:29:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 467,
+                    "name": "message",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 452,
+                    "src": "248:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 466,
+                  "id": 468,
+                  "nodeType": "Return",
+                  "src": "241:14:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 470,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMessage",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 463,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "197:2:2"
+            },
+            "returnParameters": {
+              "id": 466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 465,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 470,
+                  "src": "222:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 464,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "221:9:2"
+            },
+            "scope": 471,
+            "src": "178:82:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 472,
+        "src": "66:196:2"
+      }
+    ],
+    "src": "32:231:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/user/Desktop/projects/crowdManager/src/contracts/HelloWorld.sol",
+      "exportedSymbols": {
+        "HelloWorld": [
+          471
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 450,
+        "name": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            471
+          ],
+          "name": "HelloWorld",
+          "scope": 472
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "message",
+              "scope": 471,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bytes32",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bytes32",
+                  "type": "bytes32"
+                },
+                "id": 451,
+                "name": "ElementaryTypeName",
+                "src": "90:7:2"
+              }
+            ],
+            "id": 452,
+            "name": "VariableDeclaration",
+            "src": "90:15:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setMessage",
+              "scope": 471,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "str",
+                      "scope": 462,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 453,
+                        "name": "ElementaryTypeName",
+                        "src": "129:7:2"
+                      }
+                    ],
+                    "id": 454,
+                    "name": "VariableDeclaration",
+                    "src": "129:11:2"
+                  }
+                ],
+                "id": 455,
+                "name": "ParameterList",
+                "src": "128:13:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 456,
+                "name": "ParameterList",
+                "src": "151:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 452,
+                              "type": "bytes32",
+                              "value": "message"
+                            },
+                            "id": 457,
+                            "name": "Identifier",
+                            "src": "157:7:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 454,
+                              "type": "bytes32",
+                              "value": "str"
+                            },
+                            "id": 458,
+                            "name": "Identifier",
+                            "src": "167:3:2"
+                          }
+                        ],
+                        "id": 459,
+                        "name": "Assignment",
+                        "src": "157:13:2"
+                      }
+                    ],
+                    "id": 460,
+                    "name": "ExpressionStatement",
+                    "src": "157:13:2"
+                  }
+                ],
+                "id": 461,
+                "name": "Block",
+                "src": "151:24:2"
+              }
+            ],
+            "id": 462,
+            "name": "FunctionDefinition",
+            "src": "109:66:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getMessage",
+              "scope": 471,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 463,
+                "name": "ParameterList",
+                "src": "197:2:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 470,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 464,
+                        "name": "ElementaryTypeName",
+                        "src": "222:7:2"
+                      }
+                    ],
+                    "id": 465,
+                    "name": "VariableDeclaration",
+                    "src": "222:7:2"
+                  }
+                ],
+                "id": 466,
+                "name": "ParameterList",
+                "src": "221:9:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 466
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 452,
+                          "type": "bytes32",
+                          "value": "message"
+                        },
+                        "id": 467,
+                        "name": "Identifier",
+                        "src": "248:7:2"
+                      }
+                    ],
+                    "id": 468,
+                    "name": "Return",
+                    "src": "241:14:2"
+                  }
+                ],
+                "id": 469,
+                "name": "Block",
+                "src": "231:29:2"
+              }
+            ],
+            "id": 470,
+            "name": "FunctionDefinition",
+            "src": "178:82:2"
+          }
+        ],
+        "id": 471,
+        "name": "ContractDefinition",
+        "src": "66:196:2"
+      }
+    ],
+    "id": 472,
+    "name": "SourceUnit",
+    "src": "32:231:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2020-12-24T09:21:43.651Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

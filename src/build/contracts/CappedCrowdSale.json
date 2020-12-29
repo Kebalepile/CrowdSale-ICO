@@ -1,0 +1,215 @@
+{
+  "contractName": "CappedCrowdSale",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/user/Desktop/projects/crowdManager/src/contracts/CappedCrowdSale.sol\":\"CappedCrowdSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/user/Desktop/projects/crowdManager/src/contracts/CappedCrowdSale.sol\":{\"keccak256\":\"0x60496e0c356ff8a38273722aa967c759ea1f5739b6dc45d448279430aac94396\",\"urls\":[\"bzz-raw://7ffea386b619bb4f2f599e2a306da033765b8bc466c1754350a5c918f933ea92\",\"dweb:/ipfs/QmTozBCn1wDki2fwhCnmQvyM87MXG3BET9LyNrLZ9Zqypo\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820b3dd535788b1530fbc0145a8ce68bceb3f7a054f08fad0396bd587ae07d445ea64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820b3dd535788b1530fbc0145a8ce68bceb3f7a054f08fad0396bd587ae07d445ea64736f6c63430005100032",
+  "sourceMap": "66:57:0:-;;;95:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;95:26:0;66:57;;;;;;",
+  "deployedSourceMap": "66:57:0:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract CappedCrowdSale {\n  constructor() public {\n  }\n}\n",
+  "sourcePath": "C:/Users/user/Desktop/projects/crowdManager/src/contracts/CappedCrowdSale.sol",
+  "ast": {
+    "absolutePath": "/C/Users/user/Desktop/projects/crowdManager/src/contracts/CappedCrowdSale.sol",
+    "exportedSymbols": {
+      "CappedCrowdSale": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "CappedCrowdSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "116:5:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "106:2:0"
+            },
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "116:0:0"
+            },
+            "scope": 6,
+            "src": "95:26:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "66:57:0"
+      }
+    ],
+    "src": "32:92:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/user/Desktop/projects/crowdManager/src/contracts/CappedCrowdSale.sol",
+      "exportedSymbols": {
+        "CappedCrowdSale": [
+          6
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            6
+          ],
+          "name": "CappedCrowdSale",
+          "scope": 7
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 6,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2,
+                "name": "ParameterList",
+                "src": "106:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3,
+                "name": "ParameterList",
+                "src": "116:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4,
+                "name": "Block",
+                "src": "116:5:0"
+              }
+            ],
+            "id": 5,
+            "name": "FunctionDefinition",
+            "src": "95:26:0"
+          }
+        ],
+        "id": 6,
+        "name": "ContractDefinition",
+        "src": "66:57:0"
+      }
+    ],
+    "id": 7,
+    "name": "SourceUnit",
+    "src": "32:92:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2020-12-24T09:21:42.130Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
